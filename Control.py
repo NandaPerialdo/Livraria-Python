@@ -8,7 +8,7 @@ class Control:
     def menu(self):
         self.opcao = int(input("----- Menu ------\n\n" +
                                 "\n0. Sair" +
-                                "\n1. Cadastrar 1 Livro" +
+                                "\n1. Cadastrar 2 Livros" +
                                 "\n2. Cadastrar Usuário" +
                                 "\n3. Fazer Login" +
                                 "\n4. Fazer uma Compra\n"))

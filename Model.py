@@ -3,28 +3,31 @@ class Model:
     def __init__ (self):
         #metodo construtor
         self.codLivro = -1
-        self.nLivro = ""
-        self.vLivro = ""
-        self.qtLivro = 0
+        self.coletar = 0
+        self.livroUm = []
+        self.livroDois = []
 
     def cadLivro(self):
-        self.i = 0
-        for self.i in range(0, 2):
-            self.nLivro = input(f"Insira o nome do {self.i + 1}º livro: ")
-            self.vLivro = float(input("Insira o valor: "))
-            self.qtLivro = int(input("Insira a quantidade: "))
+            self.coletar = input("Insira o nome do 1º livro: ")
+            self.livroUm.insert(0, self.coletar)
+            self.coletar = float(input("Insira o valor: "))
+            self.livroUm.insert(1, self.coletar)
+            self.coletar = int(input("Insira a quantidade: "))
+            self.livroUm.insert(2, self.coletar)
+            self.coletar = input("\nInsira o nome do 2º livro: ")
+            self.livroDois.insert(0, self.coletar)
+            self.coletar = float(input("Insira o valor: "))
+            self.livroDois.insert(1, self.coletar)
+            self.coletar = int(input("Insira a quantidade: "))
+            self.livroDois.insert(2, self.coletar)
             print("\n")
 
     def catalogo(self):
-        print("--- Catálogo ---")
-        for self.i in range(0, 4):
-            print(f"Livro {self.i + 1}:\n"
-                  f"Nome: {self.nLivro}\n"
-                  f"Valor: R$ {self.vLivro}\n"
-                  f"Quantidade: {self.qtLivro}\n")
+        print(f"Livro 1\n Nome: {self.livroUm[0]}\n Valor: R$ {self.livroUm[1]}\n Quantidade: {self.livroUm[2]}\n")
+        print(f"Livro 2\n Nome: {self.livroDois[0]}\n Valor: R$ {self.livroDois[1]}\n Quantidade: {self.livroDois[2]}\n")
 
     def compra(self):
-        self.escolha = int(input("Digite o código do livro desejado."))
+        self.escolha = int(input("Digite o código do livro desejado: "))
 
         for self.qtLivro in range (self.escolha):
             self.reserva = int(input("Livro Indisponível\n\n"
