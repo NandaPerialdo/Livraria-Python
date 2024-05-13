@@ -6,7 +6,7 @@ class Control:
         self.mod = Model()
 
     def menu(self):
-        self.opcao = int(input("----- Menu ------\n\n" +
+        self.opcao = int(input("----- Menu ------" +
                                 "\n0. Sair" +
                                 "\n1. Cadastrar 2 Livros" +
                                 "\n2. Cadastrar Usuário" +
